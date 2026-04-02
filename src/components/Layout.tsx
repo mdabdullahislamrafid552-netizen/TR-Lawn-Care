@@ -27,7 +27,7 @@ export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col font-sans text-stone-900 bg-stone-50">
       {/* Main Navigation */}
-      <header className={`fixed w-full top-0 z-50 transition-all duration-700 ${scrolled ? 'bg-stone-50/90 backdrop-blur-xl shadow-sm py-4' : 'bg-transparent py-6'}`}>
+      <header className={`fixed w-full top-0 z-50 transition-all duration-700 ${scrolled ? 'bg-stone-950/90 backdrop-blur-xl shadow-sm py-4' : 'bg-transparent py-6'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             {/* Logo */}
@@ -42,11 +42,11 @@ export default function Layout() {
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex space-x-8 items-center">
-              <Link to="/" className={`text-sm tracking-wide transition-all duration-300 ${location.pathname === '/' ? 'text-emerald-900 font-medium' : 'text-stone-900 font-medium hover:text-emerald-800'}`}>Home</Link>
+              <Link to="/" className={`text-sm tracking-wide transition-all duration-300 ${location.pathname === '/' ? 'text-emerald-400 font-medium' : 'text-stone-100 font-medium hover:text-white'}`}>Home</Link>
               
               {/* Services Dropdown */}
               <div className="relative" onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)}>
-                <Link to="/services" className={`text-sm tracking-wide transition-all duration-300 flex items-center ${location.pathname.includes('/services') ? 'text-emerald-900 font-medium' : 'text-stone-900 font-medium hover:text-emerald-800'}`}>
+                <Link to="/services" className={`text-sm tracking-wide transition-all duration-300 flex items-center ${location.pathname.includes('/services') ? 'text-emerald-400 font-medium' : 'text-stone-100 font-medium hover:text-white'}`}>
                   Services <ChevronDown className={`w-3.5 h-3.5 ml-1 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
                 </Link>
                 <AnimatePresence>
@@ -76,22 +76,22 @@ export default function Layout() {
                 </AnimatePresence>
               </div>
 
-              <Link to="/about" className={`text-sm tracking-wide transition-all duration-300 ${location.pathname === '/about' ? 'text-emerald-900 font-medium' : 'text-stone-900 font-medium hover:text-emerald-800'}`}>About</Link>
-              <Link to="/faq" className={`text-sm tracking-wide transition-all duration-300 ${location.pathname === '/faq' ? 'text-emerald-900 font-medium' : 'text-stone-900 font-medium hover:text-emerald-800'}`}>FAQ</Link>
+              <Link to="/about" className={`text-sm tracking-wide transition-all duration-300 ${location.pathname === '/about' ? 'text-emerald-400 font-medium' : 'text-stone-100 font-medium hover:text-white'}`}>About</Link>
+              <Link to="/faq" className={`text-sm tracking-wide transition-all duration-300 ${location.pathname === '/faq' ? 'text-emerald-400 font-medium' : 'text-stone-100 font-medium hover:text-white'}`}>FAQ</Link>
             </nav>
 
             <div className="hidden md:flex items-center space-x-6">
-              <a href="tel:+17375101441" className="text-sm font-medium text-stone-900 hover:text-emerald-800 transition-colors flex items-center">
+              <a href="tel:+17375101441" className="text-sm font-medium text-stone-100 hover:text-white transition-colors flex items-center drop-shadow-md">
                 <Phone className="w-4 h-4 mr-2" /> 737-510-1441
               </a>
-              <Link to="/estimate" className="bg-stone-900 text-stone-50 px-6 py-3 rounded-sm text-sm font-medium hover:bg-emerald-900 transition-all duration-500 flex items-center">
+              <Link to="/estimate" className="bg-stone-50 text-stone-950 px-6 py-3 rounded-sm text-sm font-medium hover:bg-stone-200 transition-all duration-500 flex items-center shadow-lg">
                 Get a Quote
               </Link>
             </div>
 
             {/* Mobile Menu Button */}
             <div className="md:hidden flex items-center">
-              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-stone-900 focus:outline-none p-2">
+              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-stone-50 focus:outline-none p-2 drop-shadow-md">
                 {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
             </div>

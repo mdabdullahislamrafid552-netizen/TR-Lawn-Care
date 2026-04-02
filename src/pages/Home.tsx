@@ -46,8 +46,6 @@ export default function Home() {
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
-          {/* Light gradient to ensure text readability while keeping image bright and visible */}
-          <div className="absolute inset-0 bg-gradient-to-b from-stone-50/90 via-stone-50/40 to-stone-50"></div>
         </motion.div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 pb-32 text-center">
@@ -57,9 +55,9 @@ export default function Home() {
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-4xl mx-auto flex flex-col items-center"
           >
-            <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-md px-5 py-2 rounded-full border border-stone-200 mb-10 shadow-sm">
-              <Star className="w-3.5 h-3.5 text-emerald-600 fill-current" />
-              <span className="text-xs font-medium text-stone-800 tracking-widest uppercase">Premium Property Maintenance</span>
+            <div className="inline-flex items-center space-x-2 bg-stone-900/50 backdrop-blur-md px-5 py-2 rounded-full border border-stone-800 mb-10 shadow-sm">
+              <Star className="w-3.5 h-3.5 text-emerald-500 fill-current" />
+              <span className="text-xs font-medium text-stone-200 tracking-widest uppercase">Premium Property Maintenance</span>
             </div>
             
             <div className="overflow-hidden mb-8">
@@ -67,10 +65,10 @@ export default function Home() {
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-                className="text-6xl sm:text-7xl lg:text-8xl font-serif font-medium tracking-tight leading-[1.05] text-stone-950 text-balance drop-shadow-sm"
+                className="text-6xl sm:text-7xl lg:text-8xl font-serif font-medium tracking-tight leading-[1.05] text-white text-balance drop-shadow-lg"
               >
                 The standard for <br/>
-                <span className="text-emerald-700 italic">lawn care.</span>
+                <span className="text-emerald-400 italic">lawn care.</span>
               </motion.h1>
             </div>
             
@@ -78,7 +76,7 @@ export default function Home() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.6 }}
-              className="text-lg md:text-xl text-stone-800 mb-12 font-medium max-w-2xl leading-relaxed drop-shadow-sm"
+              className="text-lg md:text-xl text-stone-100 mb-12 font-medium max-w-2xl leading-relaxed drop-shadow-md"
             >
               Elevating properties with precision maintenance, expert landscaping, and uncompromising reliability.
             </motion.p>
@@ -91,13 +89,13 @@ export default function Home() {
             >
               <Link
                 to="/estimate"
-                className="bg-stone-950 text-stone-50 px-10 py-4 rounded-sm font-medium text-sm tracking-wide uppercase hover:bg-emerald-900 transition-all duration-500 text-center flex items-center justify-center group shadow-xl"
+                className="bg-stone-50 text-stone-950 px-10 py-4 rounded-sm font-medium text-sm tracking-wide uppercase hover:bg-stone-200 transition-all duration-500 text-center flex items-center justify-center group shadow-xl"
               >
                 Get Your Free Quote <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
                 href="tel:+17375101441"
-                className="bg-white/90 backdrop-blur-md text-stone-950 border border-stone-300 px-10 py-4 rounded-sm font-medium text-sm tracking-wide uppercase hover:bg-stone-100 transition-all duration-500 text-center flex items-center justify-center shadow-lg"
+                className="bg-stone-950/50 backdrop-blur-md text-stone-50 border border-stone-500 px-10 py-4 rounded-sm font-medium text-sm tracking-wide uppercase hover:bg-stone-900 transition-all duration-500 text-center flex items-center justify-center shadow-lg"
               >
                 Call 737-510-1441
               </a>
